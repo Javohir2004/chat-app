@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "ably": "^1.2.29",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "netlify-cli": "^17.16.2"
   }
 }
