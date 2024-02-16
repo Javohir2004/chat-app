@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <link rel="stylesheet" href="loginstyle.css">
+    <title>Login For Chat App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    $('document').ready(function() {
+      $('#btn').on('click', function() {
+        if ($('#Chat_ID').val() == "javohir_bobojonov" && $('#password').val() == 1)
+        {
+          window.location.href = "https://222-kidt.netlify.app/chat/chat.html";
+          localStorage.setItem("chat_id", "javohir_bobojonov");
+        }
+        else if ($('#Chat_ID').val() == "ismadbek_otajanov" && $('#password').val() == 2)
+        {
+          window.location.href = "https://222-kidt.netlify.app/chat/chat.html";
+          localStorage.setItem("chat_id", "ismadbek_otajanov");
+        }
+        else if ($('#Chat_ID').val() == "bobomurod_egamberganov" && $('#password').val() == 3)
+        {
+          window.location.href = "https://222-kidt.netlify.app/chat/chat.html";
+          localStorage.setItem("chat_id", "bobomurod_egamberganov");
+        }
+        else if ($('#Chat_ID').val() == "nodirbek_jumaniyozov" && $('#password').val() == 4)
+        {
+          window.location.href = "https://222-kidt.netlify.app/chat/chat.html";
+          localStorage.setItem("chat_id", "nodirbek_jumaniyozov");
+        }
+        else
+        {
+          alert("Chat ID is not added or password is incorrect!");
+        }
+      });
+    })
+  </script>
+        <div class="labelcontainer">
+          <h2>Welcome to Chat App</h2>
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Chat ID</b></label>
+          <input type="text" placeholder="Enter Chat ID" name="uname" id="Chat_ID" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+      
+          <button id="btn">Login</button>
+          <p align="right">Designed by Javohir</p>
+        </div>
+</body>
+</html>
