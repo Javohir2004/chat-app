@@ -26,6 +26,9 @@ import * as Ably from "ably/promises";
         messageElement.classList.add("message");
         messageElement.innerHTML = msg.data;
 
+        const author = msg.connectionId === ably.connection.id ? "me" : "other";
+        messageElement.setAttribute("data-author", author);
+
         messages.appendChild(messageElement);
     });
 })();
