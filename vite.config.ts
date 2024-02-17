@@ -14,7 +14,13 @@ export default defineConfig({
   build: {
     outDir: "../dist",
     sourcemap: true,
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        index: '/index.html',
+        chat: '/chat.html'
+      }
+    }
   },
   plugins: []
 })
