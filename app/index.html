@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
     <link rel="stylesheet" href="loginstyle.css">
-    <script src="./script.ts" type="module"></script>
+    <!-- <script src="./script.ts" type="module"></script> -->
     <title>Login For Chat App</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
@@ -13,30 +13,41 @@
   <script type="text/javascript">
     $('document').ready(function() {
       $('#btn').on('click', function() {
-        if ($('#Chat_ID').val() == "javohir_bobojonov" && $('#password').val() == 1)
-        {
-          window.location.href = "http://222-kidt.netlify.com/chat.html";
-          localStorage.setItem("chat_id", "javohir_bobojonov");
-        }
-        else if ($('#Chat_ID').val() == "ismadbek_otajanov" && $('#password').val() == 2)
-        {
-          window.location.href = "http://222-kidt.netlify.com/chat.html";
-          localStorage.setItem("chat_id", "ismadbek_otajanov");
-        }
-        else if ($('#Chat_ID').val() == "bobomurod_egamberganov" && $('#password').val() == 3)
-        {
-          window.location.href = "http://222-kidt.netlify.com/chat.html";
-          localStorage.setItem("chat_id", "bobomurod_egamberganov");
-        }
-        else if ($('#Chat_ID').val() == "nodirbek_jumaniyozov" && $('#password').val() == 4)
-        {
-          window.location.href = "http://222-kidt.netlify.com/chat.html";
-          localStorage.setItem("chat_id", "nodirbek_jumaniyozov");
-        }
-        else
-        {
-          alert("Chat ID is not added or password is incorrect!");
-        }
+        var currenturl = "http://localhost:8888/chat.html";
+                var chatId = $('#Chat_ID').val();
+                var password = $('#password').val();
+                var validUsers = {
+                    "javohir_bobojonov": 1,
+                    "ismadbek_otajanov": 2,
+                    "bobomurod_egamberganov": 3,
+                    "nodirbek_jumaniyozov": 4,
+                    "mavsumbek_sobirov": 5,
+                    "zohid_hasanov": 6,
+                    "bunyod_karimboyev": 7,
+                    "ogabek_rustamov": 8,
+                    "bunyod_toxtaboyev": 9,
+                    "mohichehra_qalandarova": 10,
+                    "dilnura_nurmetbayeva": 11,
+                    "ziyoda_zaripova": 12,
+                    "farida_xidirboyeva": 13,
+                    "malohat_atamuratova": 14,
+                    "asalxon_musayeva": 15,
+                    "akmal_ozodov": 16,
+                    "suhrob_atajanov": 17,
+                    "suhrob_gafurov": 18,
+                    "xadicha_aminboyeva": 19,
+                    "xilola_pirnapasova": 20
+                };
+
+                if (validUsers[chatId] == password)
+                {
+                    window.location.href = currenturl;
+                    localStorage.setItem("chat_id", chatId);
+                }
+                else
+                {
+                    alert("Chat ID is not added or password is incorrect! Remember only valid users can login!");
+                }
       });
     })
   </script>

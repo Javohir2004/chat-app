@@ -10,21 +10,28 @@
 </head>
 
 <body>
+    <div id="chat-id">Chat ID: <span id="chat-id-value"></span></div>
+    <div id="online-users"></div>
+    <main>
+        <div id="messages"></div>
+        <form id="form">
+            <input type="text" placeholder="Message" id="input" autocomplete="off" class="messages_inp">
+            <button type="submit" id="msg_btn">Send Message Directly</button>
+            <button type="button" id="show-online-users-btn">Show Online Users</button>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/ably/browser/static/ably.min.js"></script>
     <script>
-        document.write("Chat ID: " + localStorage.getItem("chat_id"));
         var chat_id = localStorage.getItem("chat_id");
         if (chat_id == null)
         {
             alert("You need to set your Chat ID");
             window.location.href = "http://222-kidt.netlify.com/index.html";
         }
+        else
+        {
+            document.getElementById("chat-id-value").textContent = chat_id;
+        }
     </script>
-    <main>
-        <div id="messages"></div>
-        <form id="form">
-            <input type="text" placeholder="Message" id="input" autocomplete="off">
-            <button type="submit">Send Message Directly</button>
-        </form>
-    </main>
 </body>
 </html>
